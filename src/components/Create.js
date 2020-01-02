@@ -28,10 +28,7 @@ class Create extends Component {
     e.preventDefault();
 
     const { fullName, address, city, zip, telephone, content } = this.state;
-
     const { userInfo } = this.props
-    alert('kkj succeed?')
-    alert(userInfo)
 
     this.ref.add({
       fullName,
