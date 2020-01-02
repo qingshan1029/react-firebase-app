@@ -8,9 +8,12 @@ class Edit extends Component {
     super(props);
     this.state = {
       key: '',
-      title: '',
-      description: '',
-      author: ''
+      fullName: '',
+      address: '',
+      city: '',
+      zip: '',
+      telephone: '',
+      content: ''
     };
   }
 
@@ -21,9 +24,12 @@ class Edit extends Component {
         const board = doc.data();
         this.setState({
           key: doc.id,
-          title: board.title,
-          description: board.description,
-          author: board.author
+          fullName: board.fullName,
+          address: board.address,
+          city: board.city,
+          zip: board.zip,
+          telephone: board.telephone,
+          content: board.content
         });
       } else {
         console.log("No such document!");
@@ -40,19 +46,25 @@ class Edit extends Component {
   onSubmit = (e) => {
     e.preventDefault();
 
-    const { title, description, author } = this.state;
-
+    const { fullName, address, city, zip, telephone, content } = this.state;
+    console.log(telephone + "    "+ content)
     const updateRef = firebase.firestore().collection('boards').doc(this.state.key);
     updateRef.set({
-      title,
-      description,
-      author
+      fullName,
+      address,
+      city,
+      zip,
+      telephone,
+      content
     }).then((docRef) => {
       this.setState({
         key: '',
-        title: '',
-        description: '',
-        author: ''
+        fullName: '',
+        address: '',
+        city: '',
+        zip: '',
+        telephone: '',
+        content: ''
       });
       this.props.history.push("/show/"+this.props.match.params.id)
     })
@@ -66,26 +78,47 @@ class Edit extends Component {
       <div class="container">
         <div class="panel panel-default">
           <div class="panel-heading">
-            <h3 class="panel-title">
-              EDIT BOARD
+            <h3 class="panel-title" style={{color:'rgb(0,0,128'}}>
+              Edit Personal Information
             </h3>
           </div>
           <div class="panel-body">
             <h4><Link to={`/show/${this.state.key}`} class="btn btn-primary">Board List</Link></h4>
             <form onSubmit={this.onSubmit}>
               <div class="form-group">
-                <label for="title">Title:</label>
-                <input type="text" class="form-control" name="title" value={this.state.title} onChange={this.onChange} placeholder="Title" />
+                <label for="fullName">FullName:</label>
+                <input type="text" class="form-control" name="fullName" value={this.state.fullName} onChange={this.onChange} placeholder="FullName" />
               </div>
               <div class="form-group">
-                <label for="description">Description:</label>
-                <input type="text" class="form-control" name="description" value={this.state.description} onChange={this.onChange} placeholder="Description" />
+                <label for="address">Address:</label>
+                <input type="text" class="form-control" name="address" value={this.state.address} onChange={this.onChange} placeholder="Address" />
               </div>
               <div class="form-group">
-                <label for="author">Author:</label>
-                <input type="text" class="form-control" name="author" value={this.state.author} onChange={this.onChange} placeholder="Author" />
+                <label for="city">City:</label>
+                <input type="text" class="form-control" name="city" value={this.state.city} onChange={this.onChange} placeholder="City" />
               </div>
-              <button type="submit" class="btn btn-success">Submit</button>
+              <div className="form-group">
+                <label htmlFor="zip">Zip:</label>
+                <input type="text" className="form-control" name="zip" value={this.state.zip}
+                       onChange={this.onChange} placeholder="Zip"/>
+              </div>
+              <div className="form-group">
+                <label htmlFor="telephone">Telephone:</label>
+                <input type="text" className="form-control" name="telephone" value={this.state.telephone}
+                       onChange={this.onChange} placeholder="Telephone"/>
+              </div>
+              <div className="form-group">
+                <label htmlFor="content">Content:</label>
+                <input type="text" className="form-control" name="content" value={this.state.content}
+                       onChange={this.onChange} placeholder="Content"/>
+              </div>
+              {/*<div className="form-group">*/}
+              {/*  <label htmlFor="content">Content:</label>*/}
+              {/*  <textArea class="form-control" name="content" onchange={this.onChange} placeholder="Content" cols="80"*/}
+              {/*            rows="3">{this.state.content}</textArea>*/}
+              {/*</div>*/}
+
+              <button type="submit" className="btn btn-success">Change</button>
             </form>
           </div>
         </div>

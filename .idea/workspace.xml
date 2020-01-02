@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="80a61bf3-048f-4e84-a06a-c9b4b1db90eb" name="Default Changelist" comment="" />
+    <list default="true" id="80a61bf3-048f-4e84-a06a-c9b4b1db90eb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Create.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Create.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Edit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Show.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Show.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1VjRwsK9xoahc9luQyNjdnYiiWg" />
   <component name="ProjectViewState">
@@ -23,6 +35,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -47,6 +60,10 @@
       <option name="presentableId" value="Default" />
       <updated>1577764759275</updated>
       <workItem from="1577764763186" duration="2888000" />
+      <workItem from="1577812164410" duration="13099000" />
+      <workItem from="1577845655904" duration="8283000" />
+      <workItem from="1577950321299" duration="216000" />
+      <workItem from="1577951120744" duration="99000" />
     </task>
     <servers />
   </component>
@@ -54,9 +71,27 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="566" y="204" width="787" height="642" key="find.popup" timestamp="1577766453223">
+    <state x="681" y="219" key="FileChooserDialogImpl" timestamp="1577815553859">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="566" y="204" width="787" height="642" key="find.popup/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1577766453223" />
+    <state x="681" y="219" key="FileChooserDialogImpl/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1577815553859" />
+    <state x="613" y="408" width="1056" height="642" key="find.popup" timestamp="1577950392610">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="613" y="408" width="1056" height="642" key="find.popup/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1577950392610" />
+    <state x="532" y="0" width="838" height="1032" key="search.everywhere.popup" timestamp="1577819705687">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="532" y="0" width="838" height="1032" key="search.everywhere.popup/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1577819705687" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/Create.js</url>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

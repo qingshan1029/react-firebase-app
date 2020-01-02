@@ -22,36 +22,43 @@ class Show extends Component {
           isLoading: false
         });
       } else {
-        console.log("No such document!");
+        alert("No such document!");
       }
     });
   }
 
   delete(id){
     firebase.firestore().collection('boards').doc(id).delete().then(() => {
-      console.log("Document successfully deleted!");
+      alert("Document successfully deleted!");
       this.props.history.push("/")
     }).catch((error) => {
-      console.error("Error removing document: ", error);
+      alert("Error removing document: ", error);
     });
   }
 
   render() {
+    alert(this.props.key)
     return (
       <div class="container">
         <div class="panel panel-default">
           <div class="panel-heading">
-          <h4><Link to="/">Board List</Link></h4>
-            <h3 class="panel-title">
-              {this.state.board.title}
+          <h4 style={{ textDecoration: 'inherit', color: 'red' }}><Link to="/">Detailed Info</Link></h4>
+            <h3 class="panel-title" style={{ color: 'rgb(0, 128, 0)' }} >
+              {this.state.board.fullName}
             </h3>
           </div>
           <div class="panel-body">
             <dl>
-              <dt>Description:</dt>
-              <dd>{this.state.board.description}</dd>
-              <dt>Author:</dt>
-              <dd>{this.state.board.author}</dd>
+              <dt>Address:</dt>
+              <dd>{this.state.board.address}</dd>
+              <dt>City:</dt>
+              <dd>{this.state.board.city}</dd>
+              <dt>Zip:</dt>
+              <dd>{this.state.board.zip}</dd>
+              <dt>Telephone:</dt>
+              <dd>{this.state.board.telephone}</dd>
+              <dt>Content:</dt>
+              <dd>{this.state.board.content}</dd>
             </dl>
             <Link to={`/edit/${this.state.key}`} class="btn btn-success">Edit</Link>&nbsp;
             <button onClick={this.delete.bind(this, this.state.key)} class="btn btn-danger">Delete</button>
